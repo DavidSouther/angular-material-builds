@@ -1,0 +1,5 @@
+{
+    "name": "angular-material-builds",
+    "version": "v0.4.0",
+    "description": "A build of Angular Material version v0.4.0 in a format that's friendly for 'npm install angular-material@v0.4.0'"
+}
