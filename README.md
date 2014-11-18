@@ -1,8 +1,48 @@
-Angular Material Builds
-==============
+## bower-material
 
-This repo is a mirror of the Angular Material Bower build outputs. As there are no official npm modules for Angular, I wanted a convenient way to manage Angular used for testing (with Karma) in my repos without committing the whole thing. Since my repo was already friendly to ```npm install``` after a clean clone, a Git repo seemed like an easy way to do it.
+This repository contains the Bower release of [angular-material](https://github.com/angular/material).
 
-To install Angular via npm, execute:
+### Installing Angular-Material
 
-    npm install angular-material-builds
+> Please note that using Angular Material requires **Angular 1.3.x** or higher.
+
+Below is a sample set of commands:
+
+```bash
+cd yourProjectDir
+bower install angular-material --save
+```
+
+### Usage
+
+Now that you have installed [locally] the Angular libraries, simply include the scripts and stylesheet in your main HTML file:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+</head>
+	<body ng-app="YourApp">
+
+	<div ng-controller="YourController">
+
+	</div>
+
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.js"></script>
+	<script src="/bower_components/hammerjs/hammer.js"></script>
+	<script src="/bower_components/angular-material/angular-material.js"></script>
+	<script>
+
+		// Include app dependencies on ngAnimate and ngMaterial
+
+		angular.module( 'YourApp', [ 'ngAnimate', 'ngMaterial' ] )
+			.controller("YourController", YourController );
+
+	</script>
+
+</body>
+</html>
+```
