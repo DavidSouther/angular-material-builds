@@ -17,9 +17,9 @@ git checkout -B $SEMVER base
 echo "Pulling 'bower-material-$SEMVER.zip'..."
 curl -L https://github.com/angular/bower-material/archive/$SEMVER.zip > bower-material.zip
 echo "Unzipping 'bower-material-$SEMVER.zip'..."
-unzip angular.zip || (echo "Unzip failed!" && exit 6)
-mv bower-material-$SEMVER/* .
-rm -rf bower-material.zip bower-material-$SEMVER/
+unzip bower-material.zip || (echo "Unzip failed!" && exit 6)
+mv bower-material-*/* .
+rm -rf bower-material.zip bower-material-*/
 
 echo "Adding 'package.json'..."
 cat >| package.json <<EOF
